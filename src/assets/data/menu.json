@@ -1,0 +1,11 @@
+[{
+    "icon": "home",
+    "name": "Home",
+    "redirectTo": "/home"
+  },
+  {
+    "icon": "pin",
+    "name": "Patient Finder",
+    "redirectTo": "/finder"
+  }
+]

@@ -1,0 +1,25 @@
+<ion-menu side="start" menuId="app-menu" contentId="main">
+  <ion-header>
+    <ion-toolbar class="app-sidemenu-toolbar" color="dark">
+      <div class="heading" text-center margin padding>
+        <a [routerLink]="['/home']">
+          <img class="app-logo" src="../../../../assets/img/png/zen-white.png" alt="SibylFinderLogo" />
+        </a>
+        <a [routerLink]="['/home']">
+          <ion-title class="app-title" color="light">{{ appTitle }}</ion-title>
+        </a>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-menu-toggle *ngFor="let opt of appMenuOptions | async">
+        <ion-item [routerLink]="opt.redirectTo">
+          <ion-icon slot="start" [name]="opt.icon"></ion-icon>
+          {{ opt.name }}
+        </ion-item>
+      </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+  <app-footer></app-footer>
+</ion-menu>

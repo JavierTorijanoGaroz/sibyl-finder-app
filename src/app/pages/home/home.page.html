@@ -1,0 +1,32 @@
+<!-- App Header -->
+<app-header [title]="homeTitle"></app-header>
+<!-- App Content - Home -->
+<ion-content color="light">
+  <ion-grid class="app-content-home" text-center justify-content-center>
+    <ion-row>
+      <ion-col size="12" text-center>
+        <img class="app-logo" src="../../../../assets/img/png/zen-black.png" alt="SibylFinderLogo" />
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-text>
+          <h1><strong><span>{{ appTitle }}</span></strong></h1>
+        </ion-text>
+        <ion-text>
+          <h5>Find the patient's status on real time</h5>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-button [routerLink]="['/finder']" size="large" expand="block" color="primary" margin>
+          <strong>START SEARCH&nbsp;&nbsp;</strong>
+          <em class="fas fa-chevron-right"></em>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<!-- App Footer -->
+<app-footer></app-footer>

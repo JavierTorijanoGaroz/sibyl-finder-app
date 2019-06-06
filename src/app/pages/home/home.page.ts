@@ -7,6 +7,12 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  appTitle: string = 'Sibyl Finder'
+
+  homeTitle: string
+
+  constructor() {
+    this.homeTitle = `home`
+  }
 
 }
