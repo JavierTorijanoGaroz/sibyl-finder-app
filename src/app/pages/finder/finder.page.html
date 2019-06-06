@@ -1,0 +1,52 @@
+<!-- App Header -->
+<app-header [title]="finderTitle"></app-header>
+<!-- App Content - Finder -->
+<ion-content color="light">
+  <ion-card color="medium">
+    <ion-card-header text-center>
+    </ion-card-header>
+    <ion-card-content text-center>
+      <em class="fas fa-user-injured fa-4x"></em>
+      <form #form="ngForm" (ngSubmit)="onReadPatient(form)">
+        <ion-grid>
+          <ion-row color="primary" justify-content-center>
+            <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+              <div padding>
+                <ion-item>
+                  <ion-input name="code" type="text" placeholder="Patient code..." ngModel required></ion-input>
+                </ion-item>
+              </div>
+              <div>
+                <ion-button type="submit" [disabled]="form.invalid" expand="block">SEARCH</ion-button>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </form>
+    </ion-card-content>
+  </ion-card>
+  <!-- Patient Not Found Card -->
+  <ion-card *ngIf="flag===0" class="finder-result-card" color="danger">
+    <ion-card-header color="danger" text-center>
+      <em class="fas fa-exclamation-circle fa-2x"></em>
+      <ion-card-title>Patient Not Found</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="finder-result-text" text-center>
+      The entered code <strong>"{{ code }}"</strong> is not registered in our database.
+    </ion-card-content>
+  </ion-card>
+  <!-- Patient Found Card -->
+  <ion-card *ngIf="flag===1" class="finder-result-card" color="success">
+    <ion-card-header color="success" text-center>
+      <em class="fas fa-check-circle fa-2x"></em>
+      <ion-card-title>Patient Found</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="finder-result-text" text-center>
+      <strong>Patient Code:</strong> {{ patient.personalCode }}<br>
+      <strong>Location:</strong> {{ patient.location }}<br>
+      <strong>Status:</strong> {{ patient.status }}
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<!-- App Footer -->
+<app-footer></app-footer>
