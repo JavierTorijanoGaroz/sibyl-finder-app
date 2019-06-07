@@ -9,36 +9,6 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
-<<<<<<< HEAD
-// Firebase
-import { environment } from '../environments/environment';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule, FirestoreSettingsToken, AngularFirestore } from '@angular/fire/firestore';
-import { AngularFireAuthModule } from '@angular/fire/auth';
-
-=======
-<<<<<<< Updated upstream
->>>>>>> feature/rq.app
-@NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
-  imports: [
-    BrowserModule, 
-    IonicModule.forRoot(), 
-    AppRoutingModule, 
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule,
-    AngularFireAuthModule
-  ],
-  providers: [
-    StatusBar,
-    SplashScreen,
-<<<<<<< HEAD
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, 
-    AngularFirestore, { provide: FirestoreSettingsToken, useValue: {} }
-=======
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
-=======
 // Components Module
 import { ComponentsModule } from './components/components.module';
 
@@ -68,8 +38,6 @@ import { HttpClientModule } from '@angular/common/http';
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     AngularFirestore, { provide: FirestoreSettingsToken, useValue: {} }
->>>>>>> Stashed changes
->>>>>>> feature/rq.app
   ],
   bootstrap: [AppComponent]
 })
